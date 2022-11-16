@@ -1,1 +1,1 @@
-# RockPaperSisters
+# RockPaperScissors
