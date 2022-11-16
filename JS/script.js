@@ -72,6 +72,7 @@ function restart() {
     playAgainButton.style.display = 'none';
     machineScore.textContent = 0;
     playerScore.textContent = 0;
+    message.textContent = '';
 }
 
 //Game
