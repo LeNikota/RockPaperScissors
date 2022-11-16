@@ -56,6 +56,7 @@ header{
 .scoreboard{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: white;
     width: 500px;
     border-radius: 10px;
@@ -74,4 +75,8 @@ header{
     align-items: center;
 
     gap: 20px;
+}
+
+#message{
+    font-size: 1.3rem;
 }
