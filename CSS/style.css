@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+html,body{
+    height: 100vh;}
+
+body{
+    margin: 0;
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    user-select: none;
+}
+
+
+header{
+    background-color: #0D1B2A;
+    color:white;
+    padding: 30px 0;
+    font-size: 2.5rem;
+    text-transform:uppercase;
+}
+
+main{
+    background-color: #1B2430;
+    height: 100%;
+    padding-top: 100px;
+}
+
+.cards-wrapper{
+    display: flex;
+    margin-top: 100px;
+
+    justify-content: center;
+    gap:100px;
+}
+
+.card{
+    background-color: white;
+    border-radius: 40px 15px;
+    height: 300px;
+    width: 200px;
+    flex: none;
+    box-shadow: black 0 -2px 10px -10px;
+    transition: 300ms;
+}
+
+.card:hover{
+    box-shadow: black 0 40px 20px -20px;
+    transform: translateY(-10px);
+    cursor: pointer;;
+}
+
+.card img{
+    height: 130px;
+    margin-top: 40px;
+}
+
+.scoreboard{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 500px;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: black 0 40px 20px -30px;
+
+    font-size: 3rem;
+}
+
+.scoreboard img{
+    height: 100px;
+}
+
+.scoreboard div{
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
