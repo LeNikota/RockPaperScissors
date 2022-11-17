@@ -15,6 +15,8 @@ scissors.addEventListener('click', () => playRound('scissors'));
 playAgainButton.addEventListener('click',() => restart());
 
 
+
+
 function clearScoreboardMessage(){ //if the user haven't clicked or chosen anything within 1 sec clear the scoreboard message
     document.onclick = resetTimer
 
@@ -65,7 +67,34 @@ function restart() {
     message.textContent = '';
 }
 
-
+function showMachineMove(machineSelection) { //temporarily changes the background-color of the computer's chosen card.
+    switch (machineSelection) {
+        case 'rock':
+            rock.style.transition = 'none'
+            rock.style.backgroundColor = '#ffffff40'
+            setTimeout(()=>{
+                rock.style.transition = '300ms';
+                rock.style.backgroundColor = 'white';
+            },300)
+            break;
+        case 'paper':
+            paper.style.transition = 'none'
+            paper.style.backgroundColor = '#ffffff40'
+            setTimeout(()=>{
+                paper.style.transition = '300ms';
+                paper.style.backgroundColor = 'white';
+            },300)
+            break;
+        case 'scissors':
+            scissors.style.transition = 'none'
+            scissors.style.backgroundColor = '#ffffff40'
+            setTimeout(()=>{
+                scissors.style.transition = '300ms';
+                scissors.style.backgroundColor = 'white';
+            },300)
+            break;
+    }
+}
 
 
 //Game
@@ -99,6 +128,7 @@ function playRound(playerSelection){
         case playerSelection === 'scissors' && machineSelection === 'paper':
             showScoreboardMessage(playerSelection, machineSelection, true);
             updatePlayerScore();
+            showMachineMove(machineSelection);
             break;
         
         case playerSelection === 'scissors' && machineSelection === 'rock':
@@ -106,8 +136,10 @@ function playRound(playerSelection){
         case playerSelection === 'paper' && machineSelection === 'scissors':
             showScoreboardMessage(playerSelection, machineSelection, false);
             updateMachineScore();
+            showMachineMove(machineSelection);
             break;
         default:
             showScoreboardMessage(playerSelection, machineSelection);
+            showMachineMove(machineSelection);
     }
 }
