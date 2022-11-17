@@ -15,16 +15,6 @@ scissors.addEventListener('click', () => playRound('scissors'));
 playAgainButton.addEventListener('click',() => restart());
 
 
-function updatePlayerScore() {
-    playerScore.textContent++;
-    checkScore();
-}
-
-function updateMachineScore() {
-    machineScore.textContent++;
-    checkScore();
-}
-
 function clearScoreboardMessage(){ //if the user haven't clicked or chosen anything within 1 sec clear the scoreboard message
     document.onclick = resetTimer
 
@@ -75,7 +65,20 @@ function restart() {
     message.textContent = '';
 }
 
+
+
+
 //Game
+function updatePlayerScore() {
+    playerScore.textContent++;
+    checkScore();
+}
+
+function updateMachineScore() {
+    machineScore.textContent++;
+    checkScore();
+}
+
 function checkScore() {
     if(playerScore.textContent >= 5){
         gameOver(true)
